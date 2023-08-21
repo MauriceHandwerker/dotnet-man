@@ -28,9 +28,9 @@ jobs:
       - name: Compress
         run: gzip dotnet.1
         
-      - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "dotnet.1.gz,"
-        bodyFile: "body.md"
+      - uses: ./.github/actions/release-action
+        with:
+          artifacts: "dotnet.1.gz,"
+          bodyFile: "body.md"
 
     
